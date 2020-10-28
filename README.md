@@ -16,6 +16,7 @@ git clone https://github.com/monovich/bart2-docker.git
 cd bart2-docker
 
 # 2) Download Source Data
+# WARNING: This is 14Gb of unpacked data. Ensure you have sufficient disk space.
 bash install-host.sh
 
 # 3) Load From Image
@@ -50,6 +51,7 @@ git clone https://github.com/monovich/bart2-docker.git
 cd bart2-docker
 
 # 2) Download Source Data
+# WARNING: This is 14Gb of unpacked data. Ensure you have sufficient disk space.
 bash install-host.sh
 
 # 3) Build an Image
