@@ -34,13 +34,13 @@ bash bin/sh/bart2-latest.sh
 # host machine to be accessible to the container.
 
 # example geneset input
-bart2 geneset -i /data/input/sample-genelist.txt -s mm10 --outdir /data/output/
+bart2 geneset -i data/input/sample-genelist.txt -s mm10 --outdir data/output/
 
 # example profile input
-bart2 profile -i /data/input/ChIP.bam -f bam -s hg38 --outdir /data/output/
+bart2 profile -i data/input/ChIP.bam -f bam -s hg38 --outdir data/output/
 
 # example region input
-bart2 region -i /data/input/ChIPpeak.bed -c 4 -s hg38 --outdir /data/output/
+bart2 region -i data/input/ChIPpeak.bed -c 4 -s hg38 --outdir data/output/
 ```
 
 # Installation From Manually Built Image
@@ -70,13 +70,13 @@ bash bin/sh/bart2-latest.sh
 # host machine to be accessible to the container.
 
 # example geneset input
-bart2 geneset -i /data/input/sample-genelist.txt -s mm10 --outdir /data/output/
+bart2 geneset -i data/input/sample-genelist.txt -s mm10 --outdir data/output/
 
 # example profile input
-bart2 profile -i /data/input/ChIP.bam -f bam -s hg38 --outdir /data/output/
+bart2 profile -i data/input/ChIP.bam -f bam -s hg38 --outdir data/output/
 
 # example region input
-bart2 region -i /data/input/ChIPpeak.bed -c 4 -s hg38 --outdir /data/output/
+bart2 region -i data/input/ChIPpeak.bed -c 4 -s hg38 --outdir data/output/
 
 # 6) (OPTIONAL) Save Image For Distribution
 docker save bart2:1.0 | gzip > bart2-1.0.tar.gz
