@@ -20,7 +20,8 @@ cd bart2-docker
 bash install-host.sh
 
 # 3) Load From Image
-docker load bart2.tar.gz
+# Version number will vary
+docker load < bart2-1.0.tar.gz
 
 # 4) Run Image
 # You may find it convenient to set the following command as a bash alias in your 
