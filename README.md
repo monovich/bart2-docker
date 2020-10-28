@@ -17,7 +17,7 @@ cd bart2-docker
 
 # 2) Download Source Data
 # WARNING: This is 14Gb of unpacked data. Ensure you have sufficient disk space.
-bash install-host.sh
+bash init.sh
 
 # 3) Load From Image
 # Version number will vary
@@ -53,7 +53,7 @@ cd bart2-docker
 
 # 2) Download Source Data
 # WARNING: This is 14Gb of unpacked data. Ensure you have sufficient disk space.
-bash install-host.sh
+bash init.sh
 
 # 3) Build an Image
 # Give your images tags for organization if you want to make iterative changes
@@ -77,4 +77,7 @@ bart2 profile -i /data/input/ChIP.bam -f bam -s hg38 --outdir /data/output/
 
 # example region input
 bart2 region -i /data/input/ChIPpeak.bed -c 4 -s hg38 --outdir /data/output/
+
+# 6) (OPTIONAL) Save Image For Distribution
+docker save bart2:1.0 | gzip > bart2-1.0.tar.gz
 ```
