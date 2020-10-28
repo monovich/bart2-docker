@@ -26,7 +26,7 @@ docker load < bart2-1.0.tar.gz
 # 4) Run Image
 # You may find it convenient to set the following command as a bash alias in your 
 # .bashrc, .bash_aliases, or other similar file
-bash <INSERT PATH>/bart2-docker/bin/sh/bart2-latest.sh
+bash bin/sh/bart2-latest.sh
 
 # 5) Run BART in Container
 # The docker image uses the data directory as a bridge between the container 
@@ -62,7 +62,7 @@ docker build -t bart2:latest -t bart2:1.0 .
 # 4) Run Image
 # You may find it convenient to set the following command as a bash alias in your 
 # .bashrc, .bash_aliases, or other similar file
-bash <INSERT PATH>/bart2-docker/bin/sh/bart2-latest.sh
+bash bin/sh/bart2-latest.sh
 
 # 5) Run BART
 # The docker image uses the data directory as a bridge between the container 
