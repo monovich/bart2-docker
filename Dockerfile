@@ -1,26 +1,31 @@
-# Create docker container from base miniconda3 image
-FROM continuumio/miniconda3
-
-# Remove redundant bytecode cache files
+FROM continuumio/miniconda3 as stepone
 ENV PYTHONDONTWRITEBYTECODE=true
-
-# Create Directory
-RUN mkdir -p /home/BARTv2.0/
-
-# Create environment from yml (python 3.7.6)
-ADD environment.yml /home/BARTv2.0/environment.yml
+COPY environment.yml /home/BARTv2.0/environment.yml
+WORKDIR /home
+WORKDIR BARTv2.0
 RUN conda env create -f /home/BARTv2.0/environment.yml
- 
-# Pull the environment name out of the environment.yml
-RUN echo "source activate $(head -1 /home/BARTv2.0/environment.yml | cut -d' ' -f2)" > ~/.bashrc
-ENV PATH /opt/conda/envs/$(head -1 /home/BARTv2.0/environment.yml | cut -d' ' -f2)/bin:$PATH
 
-# Clean up cached files, static libraries, javascript source maps, and unminified bokeh javascript
+#FROM continuumio/miniconda3 as steptwo
+#COPY --from=stepone / /
+RUN echo "source activate $(head -1 /home/BARTv2.0/environment.yml | cut -d' ' -f2)" > ~/.bashrc
+ENV PYTHONDONTWRITEBYTECODE=true
+ENV PATH /opt/conda/envs/$(head -1 /home/BARTv2.0/environment.yml | cut -d' ' -f2)/bin:$PATH
+ 
+#FROM continuumio/miniconda3 as stepthree
+#COPY --from=steptwo / /
 RUN conda clean -afy
+
+#FROM continuumio/miniconda3 as stepfour
+#COPY --from=stepthree / /
+COPY /bin/bart_v2.0 /home/BARTv2.0/bin/bart_v2.0
+WORKDIR /home/BARTv2.0/bin/bart_v2.0
+RUN python setup.py install
+ENV PATH /home/BARTv2.0/bin/bart_v2.0/bin/:$PATH
+
+# NOT IMPLEMENTED AT THE MOMENT: (Size reducers)
 #    && find /opt/conda/ -follow -type f -name '*.a' -delete \
 #    && find /opt/conda/ -follow -type f -name '*.pyc' -delete \
 #    && find /opt/conda/ -follow -type f -name '*.js.map' -delete \
 #    && find /opt/conda/lib/python*/site-packages/bokeh/server/static -follow -type f -name '*.js' ! -name '*.min.js' -delete
 
-ADD install-container.sh /home/BARTv2.0/install-container.sh
-RUN bash /home/BARTv2.0/install-container.sh
+
