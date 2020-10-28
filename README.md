@@ -26,8 +26,8 @@ docker run -ti -v ./data:/data bart2 /bin/bash
 
 # 5) Run BART
 # The docker image uses the data directory as a bridge between the container 
-#and host machine. Data needs to be placed inside the data directory on the 
-#host machine to be accessible to the container.
+# and host machine. Data needs to be placed inside the data directory on the 
+# host machine to be accessible to the container.
 
 # example geneset input
 bart2 geneset -i /data/input/genelist.txt -s hg38 --outdir /data/output/
@@ -58,8 +58,8 @@ docker run -ti -v ./data:/data bart2 /bin/bash
 
 # 5) Run BART
 # The docker image uses the data directory as a bridge between the container 
-#and host machine. Data needs to be placed inside the data directory on the 
-#host machine to be accessible to the container.
+# and host machine. Data needs to be placed inside the data directory on the 
+# host machine to be accessible to the container.
 
 # example geneset input
 bart2 geneset -i /data/input/genelist.txt -s hg38 --outdir /data/output/
