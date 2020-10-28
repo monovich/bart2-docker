@@ -1,7 +1,6 @@
 #!/bin/bash
 
 mkdir -p data/bart-libs/
-mkdir -p data/bart-core/
 mkdir -p data/input/
 mkdir -p data/output/
 
