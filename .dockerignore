@@ -1,0 +1,6 @@
+#ignore all files
+*
+#except
+!environment.yml
+!install-container.sh
+!bin/bart_v2.0/
