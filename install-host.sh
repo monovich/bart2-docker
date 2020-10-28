@@ -1,8 +1,10 @@
 #!/bin/bash
 
-mkdir -p data
+mkdir -p data/bart-libs/
+mkdir -p data/input/
+mkdir -p data/output/
 
-cd data
+cd data/bart-libs/
 
 echo "Downloading Human Data"
 wget https://virginia.box.com/shared/static/byufe8n6ft47hs4q7l6xxhyqnifjohm8.gz -O hg38_library.tar.gz
