@@ -34,7 +34,7 @@ bash bin/sh/bart2-latest.sh
 # host machine to be accessible to the container.
 
 # example geneset input
-bart2 geneset -i /data/input/sample-genelist.txt -s hg38 --outdir /data/output/
+bart2 geneset -i /data/input/sample-genelist.txt -s mm10 --outdir /data/output/
 
 # example profile input
 bart2 profile -i /data/input/ChIP.bam -f bam -s hg38 --outdir /data/output/
@@ -70,7 +70,7 @@ bash bin/sh/bart2-latest.sh
 # host machine to be accessible to the container.
 
 # example geneset input
-bart2 geneset -i /data/input/sample-genelist.txt -s hg38 --outdir /data/output/
+bart2 geneset -i /data/input/sample-genelist.txt -s mm10 --outdir /data/output/
 
 # example profile input
 bart2 profile -i /data/input/ChIP.bam -f bam -s hg38 --outdir /data/output/
