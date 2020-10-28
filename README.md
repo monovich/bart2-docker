@@ -1,6 +1,9 @@
 # bart2-docker
 Run BARTv2.0 in a Docker Container
 
+Credit:
+https://github.com/zanglab/bart2
+
 # Dependencies
 Requires a prior installation of docker and bash. Only tested on Linux, but in theory should work on Windows/MacOS.
 
