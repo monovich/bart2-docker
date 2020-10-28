@@ -25,7 +25,7 @@ docker load bart2.tar.gz
 # 4) Run Image
 # You may find it convenient to set the following command as a bash alias in your 
 # .bashrc, .bash_aliases, or other similar file
-docker run -ti -v ./data:/data bart2 /bin/bash
+docker run -ti -v "$PWD/data":/data bart2:latest /bin/bash
 
 # 5) Run BART
 # The docker image uses the data directory as a bridge between the container 
@@ -55,12 +55,13 @@ cd bart2-docker
 bash install-host.sh
 
 # 3) Build an Image
-docker build -t bart2 .
+# Give your images tags for organization if you want to make iterative changes
+docker build -t bart2:latest -t bart2:1.0 .
 
 # 4) Run Image
 # You may find it convenient to set the following command as a bash alias in your 
 # .bashrc, .bash_aliases, or other similar file
-docker run -ti -v ./data:/data bart2 /bin/bash
+docker run -ti -v "$PWD/data":/data bart2:latest /bin/bash
 
 # 5) Run BART
 # The docker image uses the data directory as a bridge between the container 
