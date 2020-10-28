@@ -22,6 +22,8 @@ bash install-host.sh
 docker load bart2.tar.gz
 
 # 4) Run Image
+# You may find it convenient to set the following command as a bash alias in your 
+# .bashrc, .bash_aliases, or other similar file
 docker run -ti -v ./data:/data bart2 /bin/bash
 
 # 5) Run BART
@@ -54,6 +56,8 @@ bash install-host.sh
 docker build -t bart2 .
 
 # 4) Run Image
+# You may find it convenient to set the following command as a bash alias in your 
+# .bashrc, .bash_aliases, or other similar file
 docker run -ti -v ./data:/data bart2 /bin/bash
 
 # 5) Run BART
