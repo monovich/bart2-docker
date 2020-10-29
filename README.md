@@ -69,11 +69,6 @@ bart2 geneset -i data/input/sample-genelist.txt -s mm10 --outdir data/output/
 
 # For future runs, provide unique file input names to avoid overwrites.
 
-# 6) Run BART in Container
-# The docker image uses the data directory as a bridge between the container 
-# and host machine. Data needs to be placed inside the data directory on the 
-# host machine to be accessible to the container.
-
 # Due to git filesize limits, only a test genelist is provided, though BART
 # also takes .bam and .bed input:
 
