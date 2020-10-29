@@ -31,13 +31,14 @@ docker pull monovich/bart2
 bash init.sh
 
 # 4) Run Image
-# You may find it convenient to set the following command as a bash alias in your 
-# .bashrc, .bash_aliases, or other similar file with an absolute path. Replace
-# /path/to/bart2-docker/ with the actual path.
-
 # OPTION 1:
 # The script called here assumes you're using the data folder from this repo.
 # bash /path/to/bart2-docker/bin/sh/bart2-latest.sh
+
+# You may find it convenient to set the above command as a bash alias in your 
+# .bashrc, .bash_aliases, or other similar file with an absolute path. Replace
+# /path/to/bart2-docker/ with the actual path. It should also be possible
+# to pass your entire bart2 call through your host shell in this manner.
 
 # OPTION 2:
 # Alternatively you can run the latest docker image from the following command to change host data locations.
