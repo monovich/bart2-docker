@@ -47,7 +47,8 @@ bash init.sh
 # docker run --rm -ti -v "/path/to/bart2-docker/data/":/home/BARTv2.0/data/ -v "/path/to/bart2-docker/bin":/home/BARTv2.0/bin/ -w /home/BARTv2.0/ bart2:latest /bin/bash
 
 # 5) Test container output
-# example geneset input
+# I'll assume you've opened an interactive shell in the container following OPTION 1. 
+# Test container output with the following line:
 bart2 geneset -i data/input/sample-genelist.txt -s mm10 --outdir data/output/
 
 # This should generate 4 files in data/output for sample-genelist:
