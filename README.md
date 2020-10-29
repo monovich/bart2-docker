@@ -35,10 +35,13 @@ bash init.sh
 # .bashrc, .bash_aliases, or other similar file with an absolute path. Replace
 # /path/to/bart2-docker/ with the actual path.
 
+# OPTION 1:
+# The script called here assumes you're using the data folder from this repo.
 # bash /path/to/bart2-docker/bin/sh/bart2-latest.sh
 
-# Alternatively you can run the latest docker image from the following command. Replace
-# /path/to/bart2-docker/ with the actual path.
+# OPTION 2:
+# Alternatively you can run the latest docker image from the following command to change host data locations.
+# Replace /path/to/bart2-docker/ with the actual path.
 
 # docker run --rm -ti -v "/path/to/bart2-docker/data/":/home/BARTv2.0/data/ -v "/path/to/bart2-docker/bin":/home/BARTv2.0/bin/ -w /home/BARTv2.0/ bart2:latest /bin/bash
 
@@ -95,7 +98,4 @@ bash bin/sh/bart2-latest.sh
 # 5) Test container output
 # example geneset input
 bart2 geneset -i data/input/sample-genelist.txt -s mm10 --outdir data/output/
-
-# This should generate 4 files in data/output for sample-genelist. Provide unique
-# file input names to avoid overwrites.
 ```
