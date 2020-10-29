@@ -24,9 +24,10 @@ bash init.sh
 
 # 4) Run Image
 # You may find it convenient to set the following command as a bash alias in your 
-# .bashrc, .bash_aliases, or other similar file with an absolute path
+# .bashrc, .bash_aliases, or other similar file with an absolute path. Replace
+# /path/to/bart2-docker/ with the actual path
 
-# bash <path/to/bart2-docker/>/bin/sh/bart2-latest.sh
+# bash /path/to/bart2-docker/bin/sh/bart2-latest.sh
 
 # 5) Test container output
 # example geneset input
