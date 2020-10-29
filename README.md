@@ -16,10 +16,12 @@ git clone https://github.com/monovich/bart2-docker.git
 cd bart2-docker
 
 # 2) Download monovich/bart2:latest image
+# The image is currently quite large ~1.2 Gb compressed. ~3 Gb uncompressed.
 docker pull monovich/bart2
 
 # 3) Download Source Data
-# WARNING: This is 14Gb of unpacked data. Ensure you have sufficient disk space on host.
+# WARNING: The required data occupies 14 Gb of storage when uncompressed. Ensure you have 
+# sufficient disk space on host.
 bash init.sh
 
 # 4) Run Image
