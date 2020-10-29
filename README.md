@@ -1,5 +1,5 @@
 # bart2-docker
-Run BARTv2.0 in a Docker Container
+Run BARTv2.0 (Binding Analysis for Regulation of Transcription) in a Docker Container
 
 Credit:
 https://github.com/zanglab/bart2
