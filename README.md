@@ -60,10 +60,8 @@ bart2 geneset -i data/input/sample-genelist.txt -s mm10 --outdir data/output/
 # and host machine. Data needs to be placed inside the data directory on the 
 # host machine to be accessible to the container.
 
-# Due to git filesize limits, only a test genelist is provided.
-
-# example geneset input
-# bart2 geneset -i data/input/sample-genelist.txt -s mm10 --outdir data/output/
+# Due to git filesize limits, only a test genelist is provided, though BART
+# also takes .bam and .bed input:
 
 # example profile input
 # bart2 profile -i data/input/ChIP.bam -f bam -s hg38 --outdir data/output/
