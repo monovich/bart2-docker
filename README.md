@@ -42,7 +42,7 @@ echo "alias bart2=$BART/bin/sh/bart2-latest.sh" >> ~/.bashrc
 . ~/.bashrc
 
 # run image to open interactive shell
-bash $BART/bin/sh/bart2-latest.sh
+bart2
 
 # OPTION 2: Custom Docker Container
 
