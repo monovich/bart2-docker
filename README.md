@@ -18,14 +18,17 @@ Fastest and simplest way to get started.
 
 ```
 # 1) Download Repo
+
 git clone https://github.com/monovich/bart2-docker.git
 cd bart2-docker
 
 # 2) Download monovich/bart2:latest image
+
 # The image is currently quite large ~1.2 Gb compressed. ~3 Gb uncompressed.
 docker pull monovich/bart2
 
 # 3) Download Source Data
+
 # WARNING: The required data occupies 14 Gb of storage when uncompressed. Ensure you have 
 # sufficient disk space on host.
 bash init.sh
@@ -53,6 +56,7 @@ docker run --rm -ti -v "/path/to/bart2-docker/data/":/home/BARTv2.0/data/ -v "/p
 
 # 5) Test container output
 # I'll assume you've opened an interactive shell in the container following OPTION 1. 
+
 # Test container output with the following line:
 bart2 geneset -i data/input/sample-genelist.txt -s mm10 --outdir data/output/
 
