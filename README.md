@@ -52,7 +52,7 @@ bart2
 # Alternatively you can run an interactive shell using the following command without setting a path.
 # Replace /path/to/bart2-docker/ with the actual path.
 
-docker run --rm -ti -v "/path/to/bart2-docker/data/":/home/BARTv2.0/data/ -v "/path/to/bart2-docker/bin":/home/BARTv2.0/bin/ -w /home/BARTv2.0/ bart2:latest /bin/bash
+docker run --rm -ti -v "/path/to/bart2-docker/data/":/home/BARTv2.0/data/ -v "/path/to/bart2-docker/bin":/home/BARTv2.0/bin/ -w /home/BARTv2.0/ /monovich/bart2:latest /bin/bash
 
 # 5) Test container output
 # I'll assume you've opened an interactive shell in the container following OPTION 1. 
