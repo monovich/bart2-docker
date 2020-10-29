@@ -19,7 +19,7 @@ cd bart2-docker
 docker pull monovich/bart2
 
 # 3) Download Source Data
-# WARNING: This is 14Gb of unpacked data. Ensure you have sufficient disk space.
+# WARNING: This is 14Gb of unpacked data. Ensure you have sufficient disk space on host.
 bash init.sh
 
 # 4) Run Image
