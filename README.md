@@ -31,8 +31,14 @@ bash bin/sh/bart2-latest.sh
 # example geneset input
 bart2 geneset -i data/input/sample-genelist.txt -s mm10 --outdir data/output/
 
-# This should generate 4 files in data/output for sample-genelist. Provide unique
-# file input names to avoid overwrites.
+# This should generate 4 files in data/output for sample-genelist:
+
+# sample-genelist_adaptive_lasso_Info.txt
+# sample-genelist_auc.txt
+# sample-genelist_bart_results.txt
+# sample-genelist_enhancer_prediction_lasso.txt
+
+# For future runs, provide unique file input names to avoid overwrites.
 
 # 6) Run BART in Container
 # The docker image uses the data directory as a bridge between the container 
