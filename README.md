@@ -7,6 +7,9 @@ optimally packaged.
 Credit:
 https://github.com/zanglab/bart2
 
+Docker Image:
+https://hub.docker.com/r/monovich/bart2
+
 # Dependencies
 Requires a prior installation of git, docker, and bash. Only tested on Linux amd64, but in theory should work fine on Windows/MacOS.
 
