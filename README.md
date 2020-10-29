@@ -22,23 +22,19 @@ docker pull monovich/bart2
 # WARNING: This is 14Gb of unpacked data. Ensure you have sufficient disk space.
 bash init.sh
 
-# 4) Load From Image
-# Version number will vary
-docker load < bart2-1.0.tar.gz
-
-# 5) Run Image
+# 4) Run Image
 # You may find it convenient to set the following command as a bash alias in your 
 # .bashrc, .bash_aliases, or other similar file
 bash bin/sh/bart2-latest.sh
 
-# 6) Test container output
+# 5) Test container output
 # example geneset input
 bart2 geneset -i data/input/sample-genelist.txt -s mm10 --outdir data/output/
 
 # This should generate 4 files in data/output for sample-genelist. Provide unique
 # file input names to avoid overwrites.
 
-# 7) Run BART in Container
+# 6) Run BART in Container
 # The docker image uses the data directory as a bridge between the container 
 # and host machine. Data needs to be placed inside the data directory on the 
 # host machine to be accessible to the container.
