@@ -33,9 +33,14 @@ bash init.sh
 # 4) Run Image
 # You may find it convenient to set the following command as a bash alias in your 
 # .bashrc, .bash_aliases, or other similar file with an absolute path. Replace
-# /path/to/bart2-docker/ with the actual path
+# /path/to/bart2-docker/ with the actual path.
 
 # bash /path/to/bart2-docker/bin/sh/bart2-latest.sh
+
+# Alternatively you can run the latest docker image from the following command. Replace
+# /path/to/bart2-docker/ with the actual path.
+
+# docker run --rm -ti -v "/path/to/bart2-docker/data/":/home/BARTv2.0/data/ -v "/path/to/bart2-docker/bin":/home/BARTv2.0/bin/ -w /home/BARTv2.0/ bart2:latest /bin/bash
 
 # 5) Test container output
 # example geneset input
