@@ -8,7 +8,7 @@ Credit:
 https://github.com/zanglab/bart2
 
 # Dependencies
-Requires a prior installation of docker and bash. Only tested on Linux, but in theory should work on Windows/MacOS.
+Requires a prior installation of git, docker, and bash. Only tested on Linux amd64, but in theory should work fine on Windows/MacOS.
 
 # Installation From Pre-Built Image
 Fastest and simplest way to get started.
