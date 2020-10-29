@@ -31,20 +31,24 @@ docker pull monovich/bart2
 bash init.sh
 
 # 4) Run Image
-# OPTION 1:
-# The script called here assumes you're using the data folder from this repo.
-# bash /path/to/bart2-docker/bin/sh/bart2-latest.sh
 
-# You may find it convenient to set the above command as a bash alias in your 
-# .bashrc, .bash_aliases, or other similar file with an absolute path. Replace
-# /path/to/bart2-docker/ with the actual path. It should also be possible
-# to pass your entire bart2 call through your host shell in this manner.
+# OPTION 1: Run with Script
 
-# OPTION 2:
-# Alternatively you can run the latest docker image from the following command to change host data locations.
+# While in your bart2-docker dir run the following to add $BART to your .bashrc file
+echo "export BART=$(pwd)" >> ~/.bashrc
+
+# reload .bashrc or restart shell
+. ~/.bashrc
+
+# run image to open interactive shell
+bash $BART/bin/sh/bart2-latest.sh
+
+# OPTION 2: Custom Docker Container
+
+# Alternatively you can run an interactive shell using the following command without setting a path.
 # Replace /path/to/bart2-docker/ with the actual path.
 
-# docker run --rm -ti -v "/path/to/bart2-docker/data/":/home/BARTv2.0/data/ -v "/path/to/bart2-docker/bin":/home/BARTv2.0/bin/ -w /home/BARTv2.0/ bart2:latest /bin/bash
+docker run --rm -ti -v "/path/to/bart2-docker/data/":/home/BARTv2.0/data/ -v "/path/to/bart2-docker/bin":/home/BARTv2.0/bin/ -w /home/BARTv2.0/ bart2:latest /bin/bash
 
 # 5) Test container output
 # I'll assume you've opened an interactive shell in the container following OPTION 1. 
