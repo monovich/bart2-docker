@@ -29,7 +29,7 @@ if [ ! -d bart_v2.0 ]; then
    tar xzvf bart_v2.0.tar.gz
 fi 
 
-sed -i "s#/path/to/data/#/home/BARTv2.0/data/bart-libs/#g" bart_v2.0/bart2/bart.conf
+sed -i "s#/path/to/library#/home/BARTv2.0/data/bart-libs/#g" bart_v2.0/bart2/bart.conf
 cd ..
 
 

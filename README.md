@@ -39,6 +39,12 @@ bash init.sh
 
 # While in your bart2-docker dir run the following to add $BART to your .bashrc file
 echo "export BART=$(pwd)" >> ~/.bashrc
+
+# reload .bashrc or restart shell
+. ~/.bashrc
+
+# While in your bart2-docker dir run the following to make bart2 into an alias
+
 echo "alias bart2=$BART/bin/sh/bart2-latest.sh" >> ~/.bashrc
 
 # reload .bashrc or restart shell
